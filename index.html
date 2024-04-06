@@ -2,63 +2,54 @@
 <html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flashcard App</title>
-    <!-- Font Awesome Icons -->
+    <title>Flashcard Application</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
     />
-    <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css" />
   </head>
-  <!-- Main -->
   <body>
     <div class="container">
-      <div class="add-flashcard-con">
-        <button id="add-flashcard">Add Flashcard</button>
+      <div class="add-flashcard">
+        <button id="add-flashcard-btn">Create Flashcard</button>
       </div>
 
-      <!-- Displaying the cards -->
-      <div id="card-con">
-        <div class="card-list-container"></div>
+      <div id="flashcard-container">
+        <div class="flashcard-list"></div>
       </div>
     </div>
 
-    <!-- Input form for question and answer -->
-    <div class="question-container hide" id="add-question-card">
-      <h2>Add Flashcard</h2>
+    <div class="question-section hide" id="create-flashcard">
+      <h2>Create Flashcard</h2>
       <div class="wrapper">
-        <!-- Error message -->
-        <div class="error-con">
-          <span class="hide" id="error">Input fields cannot be empty!</span>
+        <div class="error-section">
+          <span class="hide" id="error-message">Please fill in all fields!</span>
         </div>
-        <!-- Close Button -->
         <i class="fa-solid fa-xmark" id="close-btn"></i>
       </div>
 
       <label for="question">Question:</label>
       <textarea
         class="input"
-        id="question"
-        placeholder="Type the question here..."
+        id="question-input"
+        placeholder="Type your question here..."
         rows="2"
       ></textarea>
       <label for="answer">Answer:</label>
       <textarea
         class="input"
-        id="answer"
+        id="answer-input"
         rows="4"
-        placeholder="Type the answer here..."
+        placeholder="Type your answer here..."
       ></textarea>
-      <button id="save-btn">Save</button>
+      <button id="save-flashcard-btn">Save</button>
     </div>
 
-    <!-- Script -->
     <script src="script.js"></script>
   </body>
 </html>

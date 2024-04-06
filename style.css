@@ -4,26 +4,37 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
+/* Body */
 body {
   background-color: #f7f9fd;
 }
-.container {
+
+/* Main Container */
+main {
   width: 90vw;
   max-width: 62.5em;
   position: relative;
   margin: auto;
 }
-.add-flashcard-con {
+
+/* Flashcard Section */
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Flashcard Button */
+.add-flashcard {
   display: flex;
   justify-content: flex-end;
   padding: 1.2em 1em;
 }
-button {
+
+.flashcard-btn {
   border: none;
   outline: none;
   cursor: pointer;
-}
-.add-flashcard-con button {
   font-size: 1em;
   background-color: #587ef4;
   color: #ffffff;
@@ -31,10 +42,14 @@ button {
   font-weight: 500;
   border-radius: 0.4em;
 }
-#card-con {
+
+/* Flashcard Container */
+#flashcard-container {
   margin-top: 1em;
 }
-.question-container {
+
+/* Question Section */
+.question-section {
   width: 90vw;
   max-width: 34em;
   display: flex;
@@ -49,26 +64,26 @@ button {
   border-radius: 0.6em;
   box-shadow: 0 1em 2em rgba(28, 0, 80, 0.1);
 }
-.question-container h2 {
-  font-size: 2.2em;
-  color: #363d55;
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: 2em;
-}
+
+/* Wrapper */
 .wrapper {
   display: grid;
   grid-template-columns: 11fr 1fr;
   gap: 1em;
   margin-bottom: 1em;
 }
-.error-con {
+
+/* Error message */
+.error-section {
   align-self: center;
 }
-#error {
+
+#error-message {
   color: #ff5353;
   font-weight: 400;
 }
+
+/* Close Button */
 .fa-xmark {
   font-size: 1.4em;
   background-color: #587ef4;
@@ -81,11 +96,15 @@ button {
   cursor: pointer;
   justify-self: flex-end;
 }
+
+/* Label */
 label {
   color: #363d55;
   font-weight: 600;
   margin-bottom: 0.3em;
 }
+
+/* Textarea */
 textarea {
   width: 100%;
   padding: 0.7em 0.5em;
@@ -95,13 +114,17 @@ textarea {
   border-radius: 0.3em;
   resize: none;
 }
+
 textarea:not(:last-child) {
   margin-bottom: 1.2em;
 }
+
 textarea:focus {
   border-color: #363d55;
 }
-#save-btn {
+
+/* Save Button */
+.flashcard-btn {
   font-size: 1em;
   background-color: #587ef4;
   color: #ffffff;
@@ -109,32 +132,42 @@ textarea:focus {
   border-radius: 0.3em;
   font-weight: 600;
 }
-.card-list-container {
+
+/* Flashcard List */
+.flashcard-list {
   display: grid;
   padding: 0.2em;
   gap: 1.5em;
   grid-template-columns: 1fr 1fr 1fr;
 }
-.card {
+
+/* Flashcard */
+.flashcard {
   background-color: #ffffff;
   box-shadow: 0 0.4em 1.2em rgba(28, 0, 80, 0.08);
   padding: 1.2em;
   border-radius: 0.4em;
 }
-.question-div,
-.answer-div {
+
+/* Question and Answer */
+.question-text,
+.answer-text {
   text-align: justify;
 }
-.question-div {
+
+.question-text {
   margin-bottom: 0.5em;
   font-weight: 500;
   color: #363d55;
 }
-.answer-div {
+
+.answer-text {
   margin-top: 1em;
   font-weight: 400;
   color: #414a67;
 }
+
+/* Show/Hide Button */
 .show-hide-btn {
   display: block;
   background-color: #587ef4;
@@ -144,37 +177,31 @@ textarea:focus {
   padding: 0.6em 0;
   border-radius: 0.3em;
 }
-.buttons-con {
+
+/* Buttons Container */
+.buttons-container {
   display: flex;
   justify-content: flex-end;
 }
-.edit,
-.delete {
+
+/* Edit and Delete Button */
+.edit-btn,
+.delete-btn {
   background-color: transparent;
   padding: 0.5em;
   font-size: 1.2em;
 }
-.edit {
+
+.edit-btn {
   color: #587ef4;
 }
-.delete {
+
+.delete-btn {
   color: #ff5353;
 }
+
+/* Hide Class */
 .hide {
   display: none;
 }
-@media screen and (max-width: 800px) {
-  .card-list-container {
-    grid-template-columns: 1fr 1fr;
-    gap: 0.8em;
-  }
-}
-@media screen and (max-width: 450px) {
-  body {
-    font-size: 14px;
-  }
-  .card-list-container {
-    grid-template-columns: 1fr;
-    gap: 1.2em;
-  }
-}
+
